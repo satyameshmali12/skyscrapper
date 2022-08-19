@@ -113,9 +113,10 @@ def gameloop():
         if buildinginhand["y"]+buildinginhand["height"]-10>targety:
             playmusic("assets/poof.mp3")
             decrement = 0
-            if buildinginhand["x"]+buildinginhand["width"]<targetx1:
+            if buildinginhand["x"]+buildinginhand["width"]<targetx1 or buildinginhand["x"]>targetx2:
                 playmusic("assets/gameover.mp3")
                 scorescreen(score)
+
             elif buildinginhand["x"]<targetx1:
                 score+=1    
                 decrement = targetx1-buildinginhand["x"]
@@ -264,7 +265,7 @@ def scorescreen(score):
             displayimage(display,scaleimage(city,width,300),0,370)
 
             displaytext(display,"Congrats Hight score" if showhighscore else "Well Played",300 if not showhighscore else 200,50,60,"white",True,True)
-            displaytext(display,f"Score:-{score-1}",width/2-100,height/2-200,60,"blue",False,True)
+            displaytext(display,f"Score:-{score}",width/2-100,height/2-200,60,"blue",False,True)
             displaytext(display,"Press Space Bar To Restart",width/2-170,height/2-100,40,"black",False,True)
             displaytext(display,"OR",width/2-20,height/2-46,40,"black",False,True)
             displaytext(display,"Press H To Move Back To Home Screen",width/2-240,height/2+10,40,"black",False,True)
