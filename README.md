@@ -20,6 +20,23 @@ You will definetly love it 😊.
 
 ```
 
+## How to get started
+
+Open the terminal in the file where you wanted to play the game
+
+And Enter The Following Command
+
+```bash
+  git init
+```
+
+```bash
+  git clone https://github.com/satyameshmali12/skyscrapper
+```
+
+
+
+
 ## Contributing
 
 Contributions are always welcome!
